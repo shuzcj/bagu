@@ -1,11 +1,10 @@
 package com.Muti_Thread;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 
-public class Main {
+public class MainThreadCreation {
 
     static void testThreadsCreation1() {
         MyThread myThread = new MyThread("name1");
@@ -45,5 +44,6 @@ public class Main {
         //testThreadsCreation2();
         //testThreadsCreation3();
         testThreadsCreation4();
+
     }
 }
