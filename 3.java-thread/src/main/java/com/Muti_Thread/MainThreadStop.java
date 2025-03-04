@@ -37,7 +37,20 @@ public class MainThreadStop {
             //mainThreadStop.testThreadStop();
             //mainThreadStop.testThreadStop2();
             //mainThreadStop.testThreadStop3();
-            mainThreadStop.testThreadStop4();
+            //mainThreadStop.testThreadStop4();
+            Thread thread = new Thread(() -> {
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                System.out.println("Thread is running");
+            });
+            thread.start();
+            Thread.sleep(1000);
+            System.out.println(thread.getState());
+            thread.start();
+            System.out.println(thread.getState());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
